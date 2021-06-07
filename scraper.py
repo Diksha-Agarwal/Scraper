@@ -8,16 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from concurrent.futures import ThreadPoolExecutor
 import re
-from datetime import datetime
 import csv
 import time
 from flask import Flask, render_template, request, send_file, redirect, session
 
-# from flask_session import Session
-
 app = Flask(__name__)
-# ses = Session()
-begin_time = datetime.now()
 
 
 @app.route('/')
@@ -778,4 +773,3 @@ if __name__ == '__main__':
     app.secret_key = 'SECRET KEYY'
     # app.config['SESSION_TYPE'] = 'filesystem'
     app.run(debug=True)
-    print(datetime.now() - begin_time)
